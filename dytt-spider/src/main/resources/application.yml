@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://alima1:3306/exercise_spide?useUnicode=true&amp;characterEncoding=UTF-8
+    username: root
+    password: root
