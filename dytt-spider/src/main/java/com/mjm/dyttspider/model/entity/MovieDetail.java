@@ -1,13 +1,25 @@
 package com.mjm.dyttspider.model.entity;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
 /**
  * Created by majunmin on 2018/12/6.
  */
+@Table(name = "m_detail")
+@Entity
+@Data
+@NoArgsConstructor
 public class MovieDetail {
 
     /**
      * id
      */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     private Integer id;
 
     /**
@@ -16,9 +28,19 @@ public class MovieDetail {
     private String zhTitle;
 
     /**
+     * 所在网页
+     */
+    private String detailUrl;
+
+    /**
      * 片名
      */
     private String title;
+
+    /**
+     * 简介
+     */
+    private String description;
 
     /**
      * 年代
@@ -83,12 +105,17 @@ public class MovieDetail {
     /**
      * 片长
      */
-    private String length;
+    private String timeLength;
 
     /**
      * 导演
      */
     private String director;
+
+    /**
+     * 导演
+     */
+    private String scenarist;
 
     /**
      * 主演
@@ -101,7 +128,14 @@ public class MovieDetail {
     private String posterUrl;
 
     /**
+     * 获奖情况
+     */
+    private String awards;
+
+
+    /**
      * ftp下载链接
      */
+    @Column(nullable = false)
     private String ftpLink;
 }
