@@ -3,6 +3,7 @@ package com.mjm.grpc.service.impl;
 import com.mjm.grpc.util.RouteGuideUtil;
 import io.grpc.examples.routeguide.*;
 import io.grpc.stub.StreamObserver;
+import lombok.extern.slf4j.Slf4j;
 import net.devh.springboot.autoconfigure.grpc.server.GrpcService;
 
 import java.util.ArrayList;

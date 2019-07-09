@@ -40,6 +40,12 @@
             <version>${swagger.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.majm</groupId>
+            <artifactId>sample-spring-boot-starter</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <build>

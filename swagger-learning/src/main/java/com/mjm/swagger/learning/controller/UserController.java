@@ -1,10 +1,12 @@
 package com.mjm.swagger.learning.controller;
 
+import com.majm.config.ExampleService;
 import com.mjm.swagger.learning.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,6 +64,14 @@ public class UserController {
     public Object delUser(@PathVariable("id") Integer id) {
 //        userList.remove();
         return id;
+    }
+
+    @Autowired
+    private ExampleService exampleService;
+
+    @GetMapping("/test")
+    public Object getUser() {
+        return exampleService.desc();
     }
 
 
