@@ -1,0 +1,10 @@
+
+app:
+  id: test_admin
+apollo:
+  meta: http://alima1:8080
+server:
+  port: 9012
+spring:
+  profiles:
+    active: dev
